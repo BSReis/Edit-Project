@@ -7,70 +7,37 @@ html body {
     margin: 0;
     padding: 0;
 }
-
-#main-navbar {
+.navColorFill {
+    background-color: $white;
     position: sticky;
     top: 0;
-    left: 0;
-    background-color: $white;
-    transition: transform 0.2s;
 }
-
 .navbarTop {
+    height: 3.5rem;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 4rem;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    box-shadow: $borderShaddow;
+    & div:first-child {
+        margin-top: 4px;
+    }
+}
+.iconOrganizer {
+    display: flex;
+    justify-content: end;
+    & div:first-child {
+        margin: 10px 7px 0 0;
+    }
+    & div:last-child {
+        margin: 10px 0 0 7px;
+    }
 }
 
-.currentPoints {
-    background-color: $backgroundBlue;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    position: relative;
-    border-radius: 50px;
-    width: 52px;
-    & div {
-        color: $iconBlue;
-    }
-
-    & div:last-child {
-        background-color: $iconBlue;
-        border-radius: 50%;
-        height: 5px;
-        width: 14px;
-    }
-    &::before,
-    &::after {
-        content: "";
-        position: absolute;
-        height: 3px;
-        width: 8px;
-        border-radius: 50%;
-        background-color: $iconBlue;
-    }
-    &::before {
-        top: 2px;
-        right: 11px;
-    }
-    &::after {
-        top: 16px;
-        right: 11px;
-    }
+.backArrow {
+    margin-top: 10px !important;
 }
 
 .navbarBottomOrganizer {
     background-color: $white;
     position: sticky;
     bottom: 0;
-    height: 5.5rem;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    box-shadow: $borderShaddow;
 }
 
 .navbarBottom {
@@ -80,9 +47,45 @@ html body {
     height: 100%;
 }
 
-.navHidden {
-    transform: translateY(-100px);
+// .navHidden {
+//     transform: translateY(-100px);
+// }
+
+.horizontal_slider {
+    display: block;
+    width: 100%;
+    overflow-x: scroll;
+    box-sizing: border-box;
 }
 
+/*this is for chrome / firefox/ opera and safari*/
+.horizontal_slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* for ms*/
+.horizontal_slider {
+    -ms-overflow-style: none;
+}
+
+.slider_container {
+    display: block;
+    white-space: nowrap;
+    margin: 20px;
+}
+
+.item {
+    display: inline-block;
+    margin-right: 24px;
+}
+
+.item img {
+    width: 290px;
+    height: 174px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+///////////////////////////////////////
 @media (min-width: $desktop) {
 }

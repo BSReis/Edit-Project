@@ -52,6 +52,8 @@ html {
         }
     }
     @media (min-width: $tablet) {
+        $gridcolumns: 8;
+
         .col-t {
             flex: 1;
             box-sizing: border-box;
