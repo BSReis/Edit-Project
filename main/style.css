@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -1060,10 +1061,47 @@ html {
 html body {
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #fafafa;
+}
+
+.backgroundImage {
+  background-image: url("assets/image 295.svg");
+  background-size: cover;
+  height: 266px;
+}
+
+.imageContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 217px;
+}
+
+.imageContent div:first-child {
+  font-size: 32px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-left: 18px;
+}
+
+.imageContent div:last-child {
+  font-size: 16px;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-bottom: 32px;
+  margin-left: 18px;
 }
 
 .navColorFill {
-  background-color: #fff;
+  background-color: #FFFFFF;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -1101,23 +1139,79 @@ html body {
   margin-top: 10px !important;
 }
 
-.navbarBottomOrganizer {
-  background-color: #fff;
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 0;
-}
-
-.navbarBottom {
+.partnerCardOrganizer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.partnerCard {
+  background-color: #FFFFFF;
+  margin: 16px 18px 24px 18px;
+  padding: 18px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.04);
+          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.partnerCard div div a {
+  text-decoration: none;
+  color: #018eaa;
+}
+
+.tagsOrganizer article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 14px;
+}
+
+.tagsContatent {
+  background-color: #EAEAEA;
+  border-radius: 99px;
+  margin: 4px;
+  padding: 8px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tagsContatent img {
+  margin-right: 8px;
+}
+
+.partnerButtonOrganizer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
+  margin-top: 34px;
+  margin-bottom: 50px;
+}
+
+.partnerButtonOrganizer div a {
+  text-decoration: none;
+  color: #121212;
+}
+
+.partnerButton {
+  color: #FFFFFF;
+  background-color: #018eaa;
+  padding: 12.5px 99px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 16px;
 }
 
 .horizontal_slider {
@@ -1155,5 +1249,48 @@ html body {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 14px;
+}
+
+#bottomNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.floatingNavbarOrganizer {
+  height: 3.7rem;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 40px;
+  width: 12.5rem;
+  position: fixed;
+  bottom: 6%;
+  -webkit-transition: bottom 0.5s;
+  transition: bottom 0.5s;
+}
+
+.floatingNavbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.floatingNavbar a {
+  height: 34px;
+}
+
+.navHidden .floatingNavbarOrganizer {
+  bottom: -100vh;
 }
 /*# sourceMappingURL=style.css.map */
