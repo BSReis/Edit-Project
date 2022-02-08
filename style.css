@@ -1182,6 +1182,17 @@ html body {
   margin-top: 10px !important;
 }
 
+.container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .onBoardingIllustration {
   margin-bottom: 1px;
   line-height: 0;
@@ -1191,13 +1202,13 @@ html body {
 }
 
 .onBoardingIllustration img {
-  line-height: 0;
   width: 100vw;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .bottomSheet {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1205,8 +1216,21 @@ html body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 40vh;
-  margin-bottom: auto;
+  width: 100%;
+}
+
+.bottomSheetDiv {
+  margin: 40px 30px 0 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 6.7em;
+  font-weight: 600;
+  font-size: 26px;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .bottomSheetDiv {
@@ -1224,7 +1248,6 @@ html body {
 }
 
 .bottomSheetDiv2 {
-  margin: 40px 20px 40px 20px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -1232,10 +1255,6 @@ html body {
   font-weight: 600;
   font-size: 26px;
   text-align: center;
-}
-
-.bottomSheetSubDiv {
-  margin: 40px;
 }
 
 .bottomSheetSubText {
@@ -1280,7 +1299,7 @@ html body {
   text-decoration: none;
 }
 
-.login {
+.loginBoarding {
   margin-top: 10px;
 }
 
@@ -1295,8 +1314,9 @@ html body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: auto;
+  margin: auto;
   height: 25px;
+  margin: 36px 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1473,6 +1493,43 @@ html body {
 
 .sliderPartners div {
   display: inline-block;
+}
+
+.sliderHome {
+  display: block;
+  white-space: nowrap;
+}
+
+.sliderHome div {
+  display: inline-block;
+}
+
+.sliderHome div a img {
+  height: 177px;
+  width: 130px;
+}
+
+.homeSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 24px 26px 16px 24px;
+}
+
+.homeSection div:first-child {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.homeSection div:last-child {
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .itemPartner img {
@@ -1891,7 +1948,7 @@ html body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 25px;
+  margin: 25px;
 }
 
 .offerSection div:first-child {
@@ -2029,5 +2086,167 @@ html body {
   height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.profileTitleLogin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 196px 20px 0 20px;
+}
+
+.profileTitleLogin h1 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 45px;
+  color: #2b2b2b;
+  margin: 0;
+}
+
+.profileTitleLogin span {
+  font-size: 16px;
+  color: #8c8c8c;
+  line-height: 24px;
+}
+
+.profileTitleLogin label {
+  font-size: 12px;
+}
+
+.profileTitleLogin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 42px 20px 0 20px;
+}
+
+.profileTitleLogin h1 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 45px;
+  color: #2b2b2b;
+  margin: 0;
+}
+
+.profileTitleLogin span {
+  font-size: 16px;
+  color: #8c8c8c;
+  line-height: 24px;
+}
+
+.profileTitleLogin label {
+  font-size: 12px;
+}
+
+.formContainer {
+  margin-top: 24px;
+}
+
+.formContainer #fname {
+  width: 100%;
+  height: 40px;
+  background-color: #d9eef2;
+  border-radius: 8px;
+  border: none;
+  margin: 10px 0 20px 0;
+  padding: 12px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.formContainer label span {
+  color: red;
+}
+
+.registerButton {
+  color: #ffffff;
+  background-color: #018eaa;
+  height: 42px;
+  border-radius: 8px;
+  border: none;
+  margin: 20px 20px 7px 20px;
+  width: 80%;
+  max-width: 400px;
+}
+
+.login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 27px;
+}
+
+.login span {
+  font-size: 12px;
+}
+
+.login span span {
+  border-bottom: solid 1px;
+}
+
+.forgotPassword {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.forgotPassword span {
+  font-size: 12px;
+  border-bottom: solid 1px;
+}
+
+.alternativeLoginOrganizer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.alternativeLogin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 24px;
+  color: black;
+  background-color: #ffffff;
+  height: 40px;
+  border: #c6c6c6 solid 1px;
+  border-radius: 20px;
+  margin: 16px 20px 0px 20px;
+  width: 80%;
+  max-width: 400px;
+}
+
+.alternativeLogin img {
+  padding-right: 20px;
+}
+
+.alternativeLogin a div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */

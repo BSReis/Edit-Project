@@ -54,7 +54,7 @@ html body {
         font-weight: 400;
     }
     & div:last-child {
-        background-color: $secundaryBlue;
+        background-color: $secondaryBlue;
         border-radius: 99px;
         padding: 8px 16px 8px 16px;
         font-size: 12px;
@@ -96,11 +96,15 @@ html body {
 }
 
 //onboarding pages
+
+.container {
+    flex-direction: column;
+    height: 100vh;
+    display: flex;
+}
 .onBoardingIllustration {
     & img {
-        line-height: 0;
         width: 100vw;
-        object-fit: cover;
     }
     margin-bottom: 1px;
     line-height: 0;
@@ -108,10 +112,10 @@ html body {
 }
 
 .bottomSheet {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    height: 40vh;
-    margin-bottom: auto;
+    width: 100%;
 }
 
 .bottomSheetDiv {
@@ -125,8 +129,19 @@ html body {
     text-align: center;
     flex: 1;
 }
+.bottomSheetDiv {
+    margin: 40px 30px 0 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 6.7em;
+    font-weight: 600;
+    font-size: 26px;
+    text-align: center;
+    flex: 1;
+}
+
 .bottomSheetDiv2 {
-    margin: 40px 20px 40px 20px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -136,9 +151,6 @@ html body {
     text-align: center;
 }
 
-.bottomSheetSubDiv {
-    margin: 40px;
-}
 .bottomSheetSubText {
     line-height: 21px;
     flex: 1;
@@ -169,7 +181,7 @@ html body {
     text-decoration: none;
 }
 
-.login {
+.loginBoarding {
     margin-top: 10px;
 }
 
@@ -177,8 +189,9 @@ html body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: auto;
+    margin: auto;
     height: 25px;
+    margin: 36px 0;
     align-items: center;
 }
 
@@ -329,6 +342,34 @@ html body {
         display: inline-block;
     }
 }
+//home
+.sliderHome {
+    display: block;
+    white-space: nowrap;
+    & div {
+        display: inline-block;
+    }
+    & div a img {
+        height: 177px;
+        width: 130px;
+    }
+}
+
+.homeSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 24px 26px 16px 24px;
+    & div:first-child {
+        font-size: 26px;
+        font-weight: 600;
+    }
+    & div:last-child {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
 .itemPartner img {
     width: 90px;
     height: 116px;
@@ -343,7 +384,7 @@ html body {
         border-radius: 8px;
         margin-right: 8px;
         &:hover {
-            background-color: $secundaryBlue;
+            background-color: $secondaryBlue;
         }
     }
 }
@@ -564,7 +605,7 @@ html body {
 }
 .historyOrganizer {
     text-align: center;
-    background-color: $secundaryBlue;
+    background-color: $secondaryBlue;
     border-radius: 8px;
     width: 48%;
     height: 26px;
@@ -606,7 +647,7 @@ html body {
         height: 500px;
         width: 800px;
         border-radius: 50%;
-        background-color: $secundaryBlue;
+        background-color: $secondaryBlue;
         top: -257px;
         right: -381px;
         z-index: -1;
@@ -667,7 +708,7 @@ html body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 25px;
+    margin: 25px;
     & div:first-child {
         font-size: 26px;
         font-weight: 600;
@@ -728,7 +769,7 @@ html body {
     margin: 8px 28px;
     height: 6px;
     width: 280px;
-    background-color: $grey;
+    background-color: $gray;
     border-radius: 8px;
     position: relative;
 
@@ -757,14 +798,13 @@ html body {
         width: 64px;
         height: 64px;
         left: 258px;
-        color: $grey;
-
+        color: $gray;
     }
 }
 
 .boxButton {
     color: $white;
-    background-color: $grey;
+    background-color: $gray;
     padding: 12.5px 61px;
     border-radius: 8px;
     border: none;
@@ -772,17 +812,16 @@ html body {
     cursor: pointer;
 }
 
-.boxText{
+.boxText {
     font-weight: 400;
     margin: 40px 28px;
-    & p{
-        margin:0;
+    & p {
+        margin: 0;
     }
-    & ul{
-        margin:0;
+    & ul {
+        margin: 0;
         padding-left: 24px;
     }
-    
 }
 
 .boxImg {
@@ -794,5 +833,122 @@ html body {
         width: 100%;
         height: 100%;
         box-sizing: border-box;
+    }
+}
+
+//login
+.profileTitleLogin {
+    display: flex;
+    flex-direction: column;
+    margin: 196px 20px 0 20px;
+    & h1 {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 45px;
+        color: $black;
+        margin: 0;
+    }
+    & span {
+        font-size: 16px;
+        color: $textGrey;
+        line-height: 24px;
+    }
+    & label {
+        font-size: 12px;
+    }
+}
+
+//register
+.profileTitleLogin {
+    display: flex;
+    flex-direction: column;
+    margin: 42px 20px 0 20px;
+    & h1 {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 45px;
+        color: $black;
+        margin: 0;
+    }
+    & span {
+        font-size: 16px;
+        color: $textGrey;
+        line-height: 24px;
+    }
+    & label {
+        font-size: 12px;
+    }
+}
+
+.formContainer {
+    margin-top: 24px;
+    & #fname {
+        width: 100%;
+        height: 40px;
+        background-color: $secondaryBlue;
+        border-radius: 8px;
+        border: none;
+        margin: 10px 0 20px 0;
+        padding: 12px 20px;
+        box-sizing: border-box;
+    }
+    & label span {
+        color: red;
+    }
+}
+
+.registerButton {
+    color: $white;
+    background-color: $primary;
+    height: 42px;
+    border-radius: 8px;
+    border: none;
+    margin: 20px 20px 7px 20px;
+    width: 80%;
+    max-width: 400px;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 27px;
+    & span {
+        font-size: 12px;
+        & span {
+            border-bottom: solid 1px;
+        }
+    }
+}
+
+.forgotPassword {
+    display: flex;
+    justify-content: flex-end;
+    & span {
+        font-size: 12px;
+        border-bottom: solid 1px;
+    }
+}
+.alternativeLoginOrganizer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.alternativeLogin {
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    color: black;
+    background-color: $white;
+    height: 40px;
+    border: $gray solid 1px;
+    border-radius: 20px;
+    margin: 16px 20px 0px 20px;
+    width: 80%;
+    max-width: 400px;
+    & img {
+        padding-right: 20px;
+    }
+    & a div {
+        display: flex;
     }
 }
