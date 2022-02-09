@@ -16,6 +16,23 @@ html body {
     background-size: cover;
 }
 
+// splash screens
+.backgroundColorOnBoarding {
+    background-color: $primary;
+}
+
+.splashLogo {
+    border-style: none;
+    width: 155px;
+}
+
+.splashLogoContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 90%;
+    align-items: center;
+}
+
 //detalheOferta.html
 .backgroundImageOffer {
     background-image: url("assets/image 303.svg");
@@ -64,7 +81,7 @@ html body {
 
 //top bar
 .navColorFill {
-    background-color: $white;
+    background-color: $backgroundColorGeneral;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -286,7 +303,8 @@ html body {
 .offerContent {
     display: flex;
     flex-direction: column;
-    margin: 16px 20px 24px 20px;
+    margin-bottom: 24px;
+
     & div:first-child {
         font-size: 28px;
         font-weight: 600;
@@ -320,19 +338,20 @@ html body {
 .sliderContainer {
     display: block;
     white-space: nowrap;
-    margin-left: 6px;
+    margin-left: 10px;
     & div {
         display: inline-block;
     }
 }
 
-.item img {
-    width: 160px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 14px;
+.item {
+    &img {
+        width: 160px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 14px;
+    }
 }
-
 .sliderPartners {
     display: block;
     white-space: nowrap;
@@ -346,6 +365,8 @@ html body {
 .sliderHome {
     display: block;
     white-space: nowrap;
+    margin-left: 12px;
+    margin-bottom: 34px;
     & div {
         display: inline-block;
     }
@@ -359,15 +380,21 @@ html body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 24px 26px 16px 24px;
+    margin-bottom: 10px;
+    // margin: 24px 26px 16px 24px;
     & div:first-child {
         font-size: 26px;
         font-weight: 600;
     }
     & div:last-child {
+        text-align: end;
         font-size: 14px;
         font-weight: 500;
     }
+}
+
+.newSection {
+    margin-bottom: 18px;
 }
 
 .itemPartner img {
@@ -378,6 +405,9 @@ html body {
 }
 
 .textSlider {
+    margin-left: 24px;
+    margin-bottom: 24px;
+
     & div {
         background-color: $tagColor;
         padding: 4px 16px;
@@ -388,9 +418,25 @@ html body {
         }
     }
 }
+.homeTextSlider {
+    & div {
+        padding: 12px 16px;
+        background-color: $white;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.04);
+        font-weight: 600;
+        line-height: 21px;
+    }
+}
 
 .offerImages {
+    & div {
+        margin-bottom: 8px;
+    }
+    & div:last-child {
+        margin-bottom: 30px;
+    }
     & div a img {
+        border-radius: 14px;
         width: 100%;
     }
 }
@@ -673,15 +719,19 @@ html body {
 .userInfo {
     & p {
         margin: 0;
-        margin-left: 16px;
     }
     & p:first-child {
         font-size: 24px;
         font-weight: 600;
+        & span {
+            font-weight: 600;
+            color: $primary;
+        }
     }
     & p:last-child {
         font-size: 12px;
         color: #959595;
+        font-weight: 500;
         & span {
             color: $primary;
             font-weight: 400;
@@ -708,7 +758,7 @@ html body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 25px;
+    margin-bottom: 18px;
     & div:first-child {
         font-size: 26px;
         font-weight: 600;
@@ -716,6 +766,7 @@ html body {
     & div:last-child {
         font-size: 14px;
         font-weight: 500;
+        text-align: end;
     }
 }
 
@@ -748,7 +799,6 @@ html body {
 .notificationImg {
     & div a img {
         border-radius: 32px;
-        padding: 16px;
         width: 100%;
         height: 100%;
         box-sizing: border-box;
@@ -840,7 +890,7 @@ html body {
 .profileTitleLogin {
     display: flex;
     flex-direction: column;
-    margin: 196px 20px 0 20px;
+    margin: 209px 20px 0 20px;
     & h1 {
         font-size: 28px;
         font-weight: 600;
@@ -859,7 +909,7 @@ html body {
 }
 
 //register
-.profileTitleLogin {
+.profileTitleRegister {
     display: flex;
     flex-direction: column;
     margin: 42px 20px 0 20px;
@@ -903,7 +953,7 @@ html body {
     height: 42px;
     border-radius: 8px;
     border: none;
-    margin: 20px 20px 7px 20px;
+    margin: 24px 20px 7px 20px;
     width: 80%;
     max-width: 400px;
 }
@@ -923,6 +973,7 @@ html body {
 .forgotPassword {
     display: flex;
     justify-content: flex-end;
+    margin-top: -8px;
     & span {
         font-size: 12px;
         border-bottom: solid 1px;
@@ -945,10 +996,108 @@ html body {
     margin: 16px 20px 0px 20px;
     width: 80%;
     max-width: 400px;
-    & img {
-        padding-right: 20px;
+    & a {
+        width: 100%;
     }
     & a div {
         display: flex;
+        & p {
+            width: 100%;
+        }
+    }
+}
+
+//home
+.logoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 12px;
+    & span {
+        display: block;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    & span:nth-child(2) {
+        margin-top: 8px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+.searchOrganizer {
+    display: flex;
+    justify-content: center;
+}
+
+.searchlabel {
+    position: relative;
+    width: 100%;
+    margin-top: 32px;
+    margin-bottom: 24px;
+    & div {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        height: 16px;
+        width: 16px;
+    }
+    & input {
+        background-color: $white;
+        filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.04));
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.04);
+        border-radius: 8px;
+        border: 0;
+        height: 40px;
+        padding: 0;
+        width: calc(100% - 12px);
+        padding-left: 12px;
+    }
+}
+
+//media part
+
+.mediaContainer {
+    display: flex;
+    margin: 10px 0 20px 18px;
+    & .imageDescription {
+        position: relative;
+        margin: 0 8px;
+        & p {
+            font-size: 12.5px;
+            font-weight: 500;
+            margin: 0;
+            margin-top: 2px;
+        }
+        & span {
+            font-size: 12.5px;
+            font-weight: 500;
+            color: $textGrey;
+        }
+        & h4 {
+            margin: 0;
+            color: $primary;
+            font-weight: 600;
+        }
+    }
+}
+
+.mediaIconSection {
+    background-color: $secondaryBlue;
+    border-radius: 20px;
+    width: 98px;
+    height: 24px;
+    top: 12px;
+    right: 8px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & p:first-of-type {
+        font-size: 12px;
+        font-weight: 500;
+        color: $black;
+        margin-left: 5px;
+        margin-top: 0;
     }
 }

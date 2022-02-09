@@ -6,6 +6,7 @@ $black: #2b2b2b;
 $tagColor: #eaeaea;
 $borderShaddow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 $backgroundColorGeneral: #fafafa;
+
 $textGrey: #8c8c8c;
 $gray: #c6c6c6;
 $secondaryBlue: #d9eef2;
@@ -18,7 +19,7 @@ $gridcolumns: 6;
 $gridgutter: 8px;
 $i: 1;
 
-$gridwidth: calc(100% - #{$gridgutter} - 20px);
+$gridwidth: calc(100% - #{$gridgutter} - 32px);
 $gridwidtht: calc(90% - #{$gridgutter});
 $gridwidthd: $desktop - $gridgutter * 2;
 $gridwidthdlg: $desktoplg - $gridgutter * 3;
