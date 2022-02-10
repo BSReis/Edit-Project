@@ -49,13 +49,20 @@ html body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    height: 80%;
     & div:first-child {
+        margin-top: auto;
+
         font-size: 32px;
         font-weight: 600;
         color: $white;
         margin-left: 18px;
     }
 }
+.imageContentPartner {
+    height: 40%;
+}
+
 .nosImage {
     display: flex;
     justify-content: center;
@@ -90,22 +97,28 @@ html body {
 .navbarTop {
     height: 3.5rem;
     display: flex;
-    & div:first-child {
-        margin-top: 4px;
-    }
+}
+
+.leftIconOrganizer {
+    display: flex;
+    align-items: center;
 }
 .iconOrganizer {
     display: flex;
     justify-content: end;
-    & div:nth-child(1) {
-        margin: 10px 7px 0 0;
+    align-items: center;
+    & a:nth-child(1) {
+        margin-right: 24px;
     }
-    & div:nth-child(2) {
-        margin: 10px 7px 0 7px;
+    & a:nth-child(2) {
+        margin-right: 24px;
     }
-    & div:nth-child(3) {
-        margin: 10px 0 0 7px;
-    }
+}
+
+.oneIconOrganizer {
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 
 .backArrow {
@@ -231,17 +244,20 @@ html body {
 .partnerCardOrganizer {
     display: flex;
     justify-content: center;
+    margin-top: 14px;
+    margin-bottom: 24px;
 }
 
 .partnerCard {
     // background-color: $white;
-    margin: 16px 18px 24px 18px;
-    padding: 18px;
     font-size: 12px;
     font-weight: 600;
     border-radius: 12px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.04);
 
+    & div {
+        padding: 16px;
+    }
     & div div a {
         text-decoration: none;
         color: $primary;
@@ -252,7 +268,6 @@ html body {
     & article {
         display: flex;
         flex-wrap: wrap;
-        margin-left: 14px;
     }
 }
 
@@ -272,8 +287,11 @@ html body {
     flex-direction: column;
     align-items: center;
     margin-top: 34px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 
+    & div {
+        text-align: center;
+    }
     & div a {
         text-decoration: none;
         color: $black;
@@ -376,11 +394,10 @@ html body {
     }
 }
 
-.offersSlider{
+.offersSlider {
     margin-left: 16px;
-    & div{
+    & div {
         margin: 0 8px 10px 8px;
-
     }
 }
 
@@ -539,7 +556,25 @@ html body {
     }
 }
 //number count on referrals
-.progressBar {
+.referralContent {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    margin-top: 16px;
+
+    & div:first-child {
+        font-size: 28px;
+        font-weight: 600;
+    }
+    & p:last-child {
+        margin: 0;
+        color: $textGrey;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+.referralCount {
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -558,7 +593,7 @@ html body {
         background-color: $white;
         text-align: center;
         border-radius: 50%;
-        left: 21px;
+        left: 0px;
         //transform: translate( 0%, 0px);
     }
     & li::after {
@@ -566,7 +601,7 @@ html body {
         height: 50px;
         border-left: 1px dashed $textGrey;
         position: absolute;
-        left: 52px;
+        left: 32px;
         z-index: -1;
     }
     & li:nth-child(1):before {
@@ -592,7 +627,7 @@ html body {
     }
 }
 .referralsStepsText {
-    margin-left: 101px;
+    margin-left: 82px;
 }
 
 .referralsTitle {
@@ -609,7 +644,7 @@ html body {
 }
 .referralsInfo {
     font-weight: normal;
-    margin: 32px 0 0 22px;
+    margin-top: 22px;
     & p {
         margin: 0;
     }
@@ -622,7 +657,7 @@ html body {
     margin-top: 32px;
     & div {
         position: absolute;
-        right: 52px;
+        right: 18px;
         top: 14px;
     }
 
@@ -631,7 +666,7 @@ html body {
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.04);
         border: 0;
         height: 45px;
-        width: 80%;
+        width: 100%;
         padding-left: 12px;
     }
 }
@@ -645,33 +680,63 @@ html body {
         align-items: center;
         border-radius: 8px;
         background-color: $white;
-        margin: 0 14px;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.04);
         height: 32px;
+        margin-bottom: 16px;
     }
 }
 .stantardOrganizer {
-    width: 48%;
+    width: 49%;
     height: 10%;
     text-align: center;
-    width: 48%;
+    width: 50%;
     height: 26px;
 }
 .historyOrganizer {
     text-align: center;
     background-color: $secondaryBlue;
     border-radius: 8px;
-    width: 48%;
+    width: 50%;
     height: 26px;
     font-weight: 500;
 }
-.cuponCard {
-    margin: 32px 16px 16px 16px;
+//notificacoes
+.notiCard {
     border-radius: 14px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
     border: 0.5px solid #d0d0d0;
     background-color: $white;
-    padding: 18px;
+    margin-bottom: 16px;
+
+    & article:nth-child(1) {
+        padding: 18px;
+    }
+    & article:nth-child(2) {
+        padding: 0 18px 18px 18px;
+    }
+    & article:nth-child(2) div {
+        color: $primary;
+        margin: 6px 0;
+    }
+    & article:nth-child(2) ul {
+        font-size: 12px;
+        color: $textGrey;
+    }
+}
+
+.cuponCard {
+    border-radius: 14px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    border: 0.5px solid #d0d0d0;
+    background-color: $white;
+    margin: 16px 24px;
+
+    & article:nth-child(1) {
+        padding: 18px;
+    }
+    & article:nth-child(2) {
+        padding: 0 18px 18px 18px;
+    }
     & article:nth-child(2) div {
         color: $primary;
         margin: 6px 0;
@@ -709,14 +774,13 @@ html body {
 }
 
 .userCardContainer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    padding: 16px;
+    box-sizing: border-box;
     background-color: $white;
     border-radius: 12px;
     box-shadow: 0px 4px 15px rgba(1, 142, 170, 0.04);
-    padding: 5%;
-    margin: 28px;
+    margin-top: 28px;
+    margin-bottom: 32px;
 }
 
 .userCardTop {
@@ -800,20 +864,17 @@ html body {
     }
 }
 
-.opacityCard {
-    opacity: 0.5;
-}
-
 .notificationImg {
+    margin-bottom: 30px;
     & div a img {
-        border-radius: 32px;
+        border-radius: 14px;
+
         width: 100%;
         height: 100%;
         box-sizing: border-box;
     }
 }
 .notificationText {
-    margin: 32px;
     & p {
         margin: 0;
     }
@@ -846,15 +907,15 @@ html body {
     &:before {
         content: "301";
         position: absolute;
-        width: 64px;
-        height: 64px;
+        width: 20px;
+        height: 20px;
         left: 140px;
     }
     &:after {
         content: "600";
         position: absolute;
-        width: 64px;
-        height: 64px;
+        width: 20px;
+        height: 20px;
         left: 258px;
         color: $gray;
     }
@@ -1109,4 +1170,113 @@ html body {
         margin-left: 5px;
         margin-top: 0;
     }
+}
+
+// Menu title
+
+.profileTitle {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+    & h1 {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 45px;
+    }
+    & span {
+        font-size: 16px;
+        color: $textGrey;
+        line-height: 24px;
+    }
+    & label {
+        font-size: 12px;
+    }
+}
+
+
+// Menu sections
+
+.topSection {
+    margin-top: 24px;
+}
+
+.sectionContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    & span {
+        display: flex;
+        flex: 1;
+        padding: 20px 20px 20px 0;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    & .avatar {
+        margin-right: 10%;
+    }
+}
+
+section.bottomSection {
+    margin-top: 160px;
+}
+
+.blueLineContainer {
+    display: flex;
+    justify-content: center;
+}
+.blueLine {
+    width: 279px;
+    background-color: $primary;
+    opacity: 10%;
+    height: 1px;
+}
+
+// Personal Data Form
+
+
+.dataButton {
+    color: $white;
+    background-color: $primary;
+    height: 42px;
+    border-radius: 8px;
+    border: none;
+    margin: 20px 20px;
+}
+
+// Help Page
+
+.helpBoxesContainer {
+    margin-top: 40px;
+    & .helpBoxes {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.04);
+        border-radius: 14px;
+        margin: 0 25px 24px 25px;
+        & .helpIcon {
+            margin: 0 20px;
+        }
+        & .helpText {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            & span {
+                font-size: 18px;
+                font-weight: 600;
+            }
+            & p {
+                margin-top: 5px;
+                font-size: 14px;
+                font-weight: 400;
+                color: $primary;
+            }
+        }
+    }
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
 }

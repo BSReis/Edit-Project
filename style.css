@@ -1117,13 +1117,19 @@ html body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  height: 80%;
 }
 
 .imageContent div:first-child {
+  margin-top: auto;
   font-size: 32px;
   font-weight: 600;
   color: #ffffff;
   margin-left: 18px;
+}
+
+.imageContentPartner {
+  height: 40%;
 }
 
 .nosImage {
@@ -1175,8 +1181,13 @@ html body {
   display: flex;
 }
 
-.navbarTop div:first-child {
-  margin-top: 4px;
+.leftIconOrganizer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .iconOrganizer {
@@ -1186,18 +1197,29 @@ html body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.iconOrganizer div:nth-child(1) {
-  margin: 10px 7px 0 0;
+.iconOrganizer a:nth-child(1) {
+  margin-right: 24px;
 }
 
-.iconOrganizer div:nth-child(2) {
-  margin: 10px 7px 0 7px;
+.iconOrganizer a:nth-child(2) {
+  margin-right: 24px;
 }
 
-.iconOrganizer div:nth-child(3) {
-  margin: 10px 0 0 7px;
+.oneIconOrganizer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .backArrow {
@@ -1367,16 +1389,20 @@ html body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 14px;
+  margin-bottom: 24px;
 }
 
 .partnerCard {
-  margin: 16px 18px 24px 18px;
-  padding: 18px;
   font-size: 12px;
   font-weight: 600;
   border-radius: 12px;
   -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.04);
           box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.partnerCard div {
+  padding: 16px;
 }
 
 .partnerCard div div a {
@@ -1390,7 +1416,6 @@ html body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: 14px;
 }
 
 .tagsContatent {
@@ -1419,7 +1444,11 @@ html body {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 34px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
+}
+
+.partnerButtonOrganizer div {
+  text-align: center;
 }
 
 .partnerButtonOrganizer div a {
@@ -1725,7 +1754,31 @@ html body {
   margin-top: 42px;
 }
 
-.progressBar {
+.referralContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 25px;
+  margin-top: 16px;
+}
+
+.referralContent div:first-child {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.referralContent p:last-child {
+  margin: 0;
+  color: #8c8c8c;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.referralCount {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1736,12 +1789,12 @@ html body {
   padding: 0;
 }
 
-.progressBar li {
+.referralCount li {
   list-style-type: none;
   position: relative;
 }
 
-.progressBar li::before {
+.referralCount li::before {
   content: "1";
   font-size: 36px;
   font-weight: 600;
@@ -1753,46 +1806,46 @@ html body {
   background-color: #ffffff;
   text-align: center;
   border-radius: 50%;
-  left: 21px;
+  left: 0px;
 }
 
-.progressBar li::after {
+.referralCount li::after {
   content: "";
   height: 50px;
   border-left: 1px dashed #8c8c8c;
   position: absolute;
-  left: 52px;
+  left: 32px;
   z-index: -1;
 }
 
-.progressBar li:nth-child(1):before {
+.referralCount li:nth-child(1):before {
   content: "1";
   color: #3ea9be;
   top: 0;
 }
 
-.progressBar li:nth-child(1):after {
+.referralCount li:nth-child(1):after {
   top: 55px;
 }
 
-.progressBar li:nth-child(2):before {
+.referralCount li:nth-child(2):before {
   content: "2";
   color: #00eca5;
   top: 84px;
 }
 
-.progressBar li:nth-child(2):after {
+.referralCount li:nth-child(2):after {
   top: 144px;
 }
 
-.progressBar li:nth-child(3):before {
+.referralCount li:nth-child(3):before {
   content: "3";
   color: #78df70;
   top: 169px;
 }
 
 .referralsStepsText {
-  margin-left: 101px;
+  margin-left: 82px;
 }
 
 .referralsTitle {
@@ -1811,7 +1864,7 @@ html body {
 
 .referralsInfo {
   font-weight: normal;
-  margin: 32px 0 0 22px;
+  margin-top: 22px;
 }
 
 .referralsInfo p {
@@ -1831,7 +1884,7 @@ html body {
 
 .labelIcon div {
   position: absolute;
-  right: 52px;
+  right: 18px;
   top: 14px;
 }
 
@@ -1841,7 +1894,7 @@ html body {
           box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.04);
   border: 0;
   height: 45px;
-  width: 80%;
+  width: 100%;
   padding-left: 12px;
 }
 
@@ -1856,17 +1909,17 @@ html body {
           align-items: center;
   border-radius: 8px;
   background-color: #ffffff;
-  margin: 0 14px;
   -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.04);
           box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.04);
   height: 32px;
+  margin-bottom: 16px;
 }
 
 .stantardOrganizer {
-  width: 48%;
+  width: 49%;
   height: 10%;
   text-align: center;
-  width: 48%;
+  width: 50%;
   height: 26px;
 }
 
@@ -1874,19 +1927,53 @@ html body {
   text-align: center;
   background-color: #d9eef2;
   border-radius: 8px;
-  width: 48%;
+  width: 50%;
   height: 26px;
   font-weight: 500;
 }
 
-.cuponCard {
-  margin: 32px 16px 16px 16px;
+.notiCard {
   border-radius: 14px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
   border: 0.5px solid #d0d0d0;
   background-color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.notiCard article:nth-child(1) {
   padding: 18px;
+}
+
+.notiCard article:nth-child(2) {
+  padding: 0 18px 18px 18px;
+}
+
+.notiCard article:nth-child(2) div {
+  color: #018eaa;
+  margin: 6px 0;
+}
+
+.notiCard article:nth-child(2) ul {
+  font-size: 12px;
+  color: #8c8c8c;
+}
+
+.cuponCard {
+  border-radius: 14px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  border: 0.5px solid #d0d0d0;
+  background-color: #ffffff;
+  margin: 16px 24px;
+}
+
+.cuponCard article:nth-child(1) {
+  padding: 18px;
+}
+
+.cuponCard article:nth-child(2) {
+  padding: 0 18px 18px 18px;
 }
 
 .cuponCard article:nth-child(2) div {
@@ -1931,22 +2018,15 @@ html body {
 }
 
 .userCardContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  padding: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: #ffffff;
   border-radius: 12px;
   -webkit-box-shadow: 0px 4px 15px rgba(1, 142, 170, 0.04);
           box-shadow: 0px 4px 15px rgba(1, 142, 170, 0.04);
-  padding: 5%;
-  margin: 28px;
+  margin-top: 28px;
+  margin-bottom: 32px;
 }
 
 .userCardTop {
@@ -2048,20 +2128,16 @@ html body {
   top: 10px;
 }
 
-.opacityCard {
-  opacity: 0.5;
+.notificationImg {
+  margin-bottom: 30px;
 }
 
 .notificationImg div a img {
-  border-radius: 32px;
+  border-radius: 14px;
   width: 100%;
   height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-.notificationText {
-  margin: 32px;
 }
 
 .notificationText p {
@@ -2097,16 +2173,16 @@ html body {
 .progressBar:before {
   content: "301";
   position: absolute;
-  width: 64px;
-  height: 64px;
+  width: 20px;
+  height: 20px;
   left: 140px;
 }
 
 .progressBar:after {
   content: "600";
   position: absolute;
-  width: 64px;
-  height: 64px;
+  width: 20px;
+  height: 20px;
   left: 258px;
   color: #c6c6c6;
 }
@@ -2441,5 +2517,169 @@ html body {
   color: #2b2b2b;
   margin-left: 5px;
   margin-top: 0;
+}
+
+.profileTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0px 20px;
+}
+
+.profileTitle h1 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 45px;
+}
+
+.profileTitle span {
+  font-size: 16px;
+  color: #8c8c8c;
+  line-height: 24px;
+}
+
+.profileTitle label {
+  font-size: 12px;
+}
+
+.topSection {
+  margin-top: 24px;
+}
+
+.sectionContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.sectionContainer span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 20px 20px 20px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.sectionContainer .avatar {
+  margin-right: 10%;
+}
+
+section.bottomSection {
+  margin-top: 160px;
+}
+
+.blueLineContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.blueLine {
+  width: 279px;
+  background-color: #018eaa;
+  opacity: 10%;
+  height: 1px;
+}
+
+.formContainer {
+  margin-top: 24px;
+}
+
+.formContainer #fname {
+  width: 100%;
+  height: 40px;
+  background-color: #d9eef2;
+  border-radius: 8px;
+  border: none;
+  margin: 10px 0 20px 0;
+  padding: 12px 20px;
+}
+
+.formContainer #fname span {
+  color: red;
+}
+
+.dataButton {
+  color: #ffffff;
+  background-color: #018eaa;
+  height: 42px;
+  border-radius: 8px;
+  border: none;
+  margin: 20px 20px;
+}
+
+.helpBoxesContainer {
+  margin-top: 40px;
+}
+
+.helpBoxesContainer .helpBoxes {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.04);
+          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.04);
+  border-radius: 14px;
+  margin: 0 25px 24px 25px;
+}
+
+.helpBoxesContainer .helpBoxes .helpIcon {
+  margin: 0 20px;
+}
+
+.helpBoxesContainer .helpBoxes .helpText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.helpBoxesContainer .helpBoxes .helpText span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.helpBoxesContainer .helpBoxes .helpText p {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #018eaa;
+}
+
+.copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 130px;
 }
 /*# sourceMappingURL=style.css.map */
