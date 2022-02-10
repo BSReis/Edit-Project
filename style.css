@@ -2599,24 +2599,6 @@ section.bottomSection {
   height: 1px;
 }
 
-.formContainer {
-  margin-top: 24px;
-}
-
-.formContainer #fname {
-  width: 100%;
-  height: 40px;
-  background-color: #d9eef2;
-  border-radius: 8px;
-  border: none;
-  margin: 10px 0 20px 0;
-  padding: 12px 20px;
-}
-
-.formContainer #fname span {
-  color: red;
-}
-
 .dataButton {
   color: #ffffff;
   background-color: #018eaa;
