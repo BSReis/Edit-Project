@@ -59,7 +59,7 @@ function getResponse() {
     let userText = $("#textInput").val();
 
     if (userText == "") {
-        userText = "Reencaminhar mensagem para o seu email";
+        userText = "I love Code Palace!";
     }
 
     let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
@@ -93,7 +93,7 @@ function sendButton() {
 }
 
 function heartButton() {
-    buttonSendText("Enviou um coração")
+    buttonSendText("Heart clicked!")
 }
 
 // Press enter to send a message
