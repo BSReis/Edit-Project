@@ -2586,19 +2586,6 @@ html body {
   position: absolute;
 }
 
-.instaVideo {
-  height: 100%;
-  padding-bottom: 55.55556%;
-  position: relative;
-  margin-top: 0 !important;
-}
-
-.instaVideo iframe {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-
 .profileTitle {
   display: -webkit-box;
   display: -ms-flexbox;
